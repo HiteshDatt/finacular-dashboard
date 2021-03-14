@@ -1,0 +1,109 @@
+.light-font{
+    color: rgb(161, 161, 161);
+}
+
+.dashboard-grid{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.dashboard-grid > div{
+    width: 220px;
+    min-height: 160px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid rgb(224 224 224);
+    margin-bottom: 30px;
+}
+.dashboard-grid .asset-balance .title,
+.dashboard-grid .financial-ind .title, 
+.dashboard-grid .growth-rate .title,
+.dashboard-grid .average-expenses .title,
+.dashboard-grid .major-investments .title{
+    color: #1d3778;
+    padding: 8px;
+    margin-bottom: 5px;
+    font-size: 17px;
+    border-bottom: 1px solid rgb(224 224 224);
+}
+.dashboard-grid .asset-balance .amount{
+    color: #1d3778;
+    width: fit-content;
+    padding: 5px 8px;
+    margin: 8px;
+    font-size: 18px;
+    background-color: rgb(213, 219, 236);
+    border-radius: 5px;
+}
+.dashboard-grid .asset-balance span,
+.dashboard-grid .financial-ind span,
+.dashboard-grid .growth-rate span,
+.dashboard-grid .average-expenses span,
+.dashboard-grid .major-investments span{
+    display: inline-block;
+    margin: 4px 8px;
+}
+.dashboard-grid .financial-ind .age,
+.dashboard-grid .major-investments .amount{
+    color: #1d3778;
+    padding: 5px 8px;
+    margin: 8px;
+    font-size: 18px;
+}
+
+.dashboard-grid .growth-rate, 
+.dashboard-grid .average-expenses{
+    justify-self: center;
+}
+.dashboard-grid .growth-rate .title,
+.dashboard-grid .average-expenses .title {
+    color: #0089d3;
+}
+.dashboard-grid .growth-rate .rate,
+.dashboard-grid .average-expenses .expense{
+    color: #0089d3;
+    width: fit-content;
+    padding: 5px 8px;
+    margin: 8px;
+    font-size: 18px;
+    border: 1.8px solid #0089d3;
+    border-radius: 5px;
+}
+.dashboard-grid .average-expenses .expense{
+    border: 0;
+}
+
+.major-investments{
+    justify-self: end;
+}
+
+@media only screen and (max-width: 1110px) {
+    .dashboard-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .major-investments,
+    .dashboard-grid .growth-rate, 
+    .dashboard-grid .average-expenses{
+        justify-self: unset;
+    }
+}
+@media only screen and (max-width: 670px){
+    .dashboard-grid{
+        grid-template-columns: 1fr;
+    }
+    .dashboard-grid > div,
+    .major-investments,
+    .dashboard-grid .growth-rate, 
+    .dashboard-grid .average-expenses{
+        justify-self: center;
+    }
+}
+@media only screen and (max-width: 380px){
+    .dashboard-grid > div,
+    .major-investments,
+    .dashboard-grid .growth-rate, 
+    .dashboard-grid .average-expenses{
+        justify-self: right;
+    }
+}

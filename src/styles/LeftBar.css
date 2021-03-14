@@ -1,0 +1,103 @@
+.left-bar{
+    /*position absolute for smaller screens*/
+    height: 100vh;
+    background-color: white;
+    max-width: 250px;
+    border: 1px solid rgb(224 224 224);
+    transition: all .4s;
+    z-index: 10;
+}
+
+.left-bar .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 5px;
+    position: relative;
+}
+.left-bar .logo .nav-opener{
+    position: absolute;
+    top: 30px;
+    right: -18px;
+    font-weight: 900;
+    cursor: pointer;
+    background: white;
+    border: 1px solid rgb(224 224 224);
+    border-left: 0;
+    padding: 5px;
+}
+.left-bar .logo .nav-opener svg{
+    font-size: 25px;
+    margin-right: -5px;
+    margin-top: 5px;
+    animation: nav-opener 1s linear 2s infinite alternate;
+    position: relative;
+}
+@keyframes nav-opener {
+    from {left:0px;}
+    to {left:6px;}
+}
+
+.left-bar .logo img{
+    width: 50px;
+}
+.left-bar .logo div{
+    font-size: 18px;
+    letter-spacing: 1.5px;
+}
+
+.left-bar nav{
+    margin: 10px 0px;
+    color: black;
+}
+.left-bar nav li{
+    padding: 15px;
+    margin-right: 10px;
+    list-style-type: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.left-bar nav li:hover{
+    background-color: #1d3778;
+    color: white;
+    cursor: pointer;
+}
+.left-bar nav li > div{
+    padding-left: 10px;
+}
+.left-bar nav li svg{
+    font-size: 20px;
+    color: #1d3778;
+}
+.left-bar nav li:hover svg{
+    color: white;
+}
+
+.left-bar .user{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 50px;
+}
+.left-bar .user img{
+    width: 50px;
+    height: 48px;
+    margin: 5px;
+    border-radius: 50%;
+    border: 5px solid #1d3778;
+}
+.left-bar .user span{
+    display: block;
+}
+
+.left-bar.small-screen{
+    position: absolute;
+    left: -200px;
+}
+@media only screen and (min-width: 845px){
+    .left-bar .logo .nav-opener{
+        display: none;
+    }
+}

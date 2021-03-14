@@ -1,0 +1,29 @@
+.dashboard .chart{
+    height: 60vh;
+    width: 90%;
+    background-color: white;
+    margin: 20px auto;
+    border-radius: 5px;
+    border: 1px solid rgb(224 224 224);
+}
+
+
+/* Chart Inputs*/
+.inputs{
+    width: 90%;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid rgb(224 224 224);
+    text-align: right;
+}
+.inputs h3{
+    color: #1d3778;
+    padding: 8px;
+    margin-bottom: 5px;
+    font-size: 17px;
+    border-bottom: 1px solid rgb(224 224 224);
+}
+.inputs input{
+    text-align: right;
+}

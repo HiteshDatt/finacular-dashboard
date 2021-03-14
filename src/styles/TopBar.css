@@ -1,0 +1,21 @@
+.top-bar{
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgb(224 224 224);
+    border-right: 0;
+}
+.top-bar .settings, .top-bar .notifs{
+    padding: 10px 25px;
+    border: 1px solid rgb(224 224 224);
+    height: 100%;
+    border-bottom: 0;
+}
+.top-bar .settings svg, .top-bar .notifs svg{
+    color: rgb(134, 134, 134);
+    transform: scale(1.6);
+    cursor: pointer;
+}
